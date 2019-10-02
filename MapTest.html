@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Map Test</title>
+</head>
+
+<body>
+    <h1>Project Map Test</h1>
+
+    <div id="map" style="width:480px;height:400px;"></div>
+
+    <script>
+        let map;
+        let service;
+        let infowindow;
+
+        let city = {
+            query: 'Gilbert Arizona',
+            fields: ['name', 'geometry'],
+        };
+
+        function myMap() {
+            let tmpCenter = new google.maps.LatLng(0, 0);
+
+            map = new google.maps.Map(document.getElementById('map'), { center: tmpCenter, zoom: 12 });
+
+            service = new google.maps.places.PlacesService(map);
+
+            service.findPlaceFromQuery(city, function (results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                }
+            });
+
+
+            function createMarker(place) {
+                let marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow = new google.maps.InfoWindow();
+
+                    infowindow.setContent(place.name);
+                    infowindow.open(map, this);
+                });
+            }
+
+            function addressMarker(address) {
+                let request = {
+                    query: address,
+                    fields: ['name', 'geometry'],
+                };
+                console.log(address);
+
+                service = new google.maps.places.PlacesService(map);
+
+                service.findPlaceFromQuery(request, function (results, status) {
+                    if (status === google.maps.places.PlacesServiceStatus.OK) {
+                        createMarker(results[0]);
+                    }
+                });
+            }
+
+            addressMarker("92 West Vaughn Avenue");
+            addressMarker("745 N Gilbert Rd #110");
+        }
+
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP_iPWr3BoBerRke2pVaWWynlarDRego&libraries=places&callback=myMap"
+        async defer></script>
+</body>
+
+</html>
