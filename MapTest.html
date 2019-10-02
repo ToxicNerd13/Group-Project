@@ -17,6 +17,7 @@
         let map;
         let service;
         let infowindow;
+        let marker;
 
         let city = {
             query: 'Gilbert Arizona',
@@ -38,7 +39,7 @@
 
 
             function createMarker(place) {
-                let marker = new google.maps.Marker({
+                marker = new google.maps.Marker({
                     map: map,
                     position: place.geometry.location
                 });
@@ -56,7 +57,6 @@
                     query: address,
                     fields: ['name', 'geometry'],
                 };
-                console.log(address);
 
                 service = new google.maps.places.PlacesService(map);
 
@@ -66,9 +66,13 @@
                     }
                 });
             }
-
+            addressMarker("");
+            addressMarker("1275 E Baseline Rd #107");
             addressMarker("92 West Vaughn Avenue");
             addressMarker("745 N Gilbert Rd #110");
+            addressMarker("1550 N Stonehenge Dr #102");
+            addressMarker("240 N Sunway Dr #102");
+            
         }
 
     </script>
