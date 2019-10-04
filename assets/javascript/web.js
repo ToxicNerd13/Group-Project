@@ -11,92 +11,24 @@ let images =[];
 let eventLat =[];
 let eventLong = [];
 
-//eventbite api key link | function declaring for search of event 
- 
-function searchEventLocation (input){
-    var queryURL =
-    "https://www.eventbrite.com/oauth/authorize?response_type=code&client_id=PUOXOWJBCOXJDZOEI4&redirect_uri=YOUR_REDIRECT_URI" +
-    input;
-  var apiURL = "https://proxy-cbc.herokuapp.com/proxy";
+function searchEventTpe(input){
+     //QueryURL using user search input as a parameter
+  var queryURL =
+  "" +
+  input;
+var apiURL = "";
 
-  $.ajax({
-    url: apiURL,
-    method: "POST",
-    data: {
-      url: queryURL
+$.ajax({
+  url: apiURL,
+  method: "POST",
+  data: {
+    url: queryURL
+  }
+
+
+}, function(res){
+    
+})
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
+})
