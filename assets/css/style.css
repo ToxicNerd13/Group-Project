@@ -13,12 +13,22 @@ header {
     background: black;
     text-align: center;
     color: orange;
+    border-bottom: 5px double orange; 
 }
 .page-title {
     font-family: 'Creepster', cursive, serif;
     font-size: 70px;
 }
-#test {
-    background-color: black;
-    height: 300px;
+.carousel {
+    margin: 50px auto;
+}
+
+#main {
+    background: black;
+}
+.carousel-item img {
+    max-height: 300px;
+}
+nav {
+  border: 2px solid orange;  
 }
