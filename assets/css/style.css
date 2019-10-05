@@ -6,6 +6,8 @@ p {
 body {
     background-color: gray;
     background-image: url("../images/bats-pattern.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
     font-family: Arial, Helvetica, sans-serif;
 }
 .navbar {
