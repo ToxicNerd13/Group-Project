@@ -1,4 +1,6 @@
-* {
+/*HEAD*/
+p {
+    font: italic;
     box-sizing: border-box;
 }
 body {
@@ -31,4 +33,5 @@ header {
 }
 nav {
   border: 2px solid orange;  
+>>>>>>> dc606a2400eb050809d18859b92d5d96cf62fec5
 }
