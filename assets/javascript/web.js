@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 //variables 
-let  date;
+let date;
 let event = [];
 let location = [];
 let results = [];
