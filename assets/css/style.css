@@ -1,9 +1,14 @@
 * {
     box-sizing: border-box;
 }
+p {
+    font: italic;
+}
 body {
     background-color: gray;
     background-image: url("../images/bats-pattern.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
     font-family: Arial, Helvetica, sans-serif;
 }
 .navbar {
@@ -11,14 +16,40 @@ body {
 }
 header {
     background: black;
-    text-align: center;
     color: orange;
+    border-bottom: 5px double orange; 
 }
-.page-title {
+#page-title {
     font-family: 'Creepster', cursive, serif;
     font-size: 70px;
+    text-align: center;
 }
-#test {
-    background-color: black;
-    height: 300px;
+#page-title a {
+    color: rgb(112, 120, 128);
+}
+#page-title a:hover {
+    text-decoration: none;
+}
+#title-h5 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+.carousel {
+    margin: 50px auto;
+}
+
+#main {
+    background: black;
+}
+.carousel-item img {
+    max-height: 300px;
+}
+nav {
+  border: 2px solid orange;  
+}
+#search-label {
+    padding-bottom: 5px;
+    color: orange;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
