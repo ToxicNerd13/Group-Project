@@ -6,7 +6,7 @@ function request(query) {
 function myMap() {
     let tmpCenter = new google.maps.LatLng(0, 0);
     let bounds = new google.maps.LatLngBounds();
-    let map = new google.maps.Map(document.getElementById("map"), { center: tmpCenter, zoom: 12 });
+    let map = new google.maps.Map(document.getElementById("family-map"), { center: tmpCenter, zoom: 12 });
 
     function createMarker(place) {
         let marker = new google.maps.Marker({
