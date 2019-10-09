@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
 
     <title>Fright Finder</title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/95a97a493a.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS and JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -34,23 +40,42 @@
 </head>
 
 <body>
-    <div class="container mt-3" id="main">
-        <header class="row align-items-center py-3">
-            <div class="col-sm-3">
-                    <img id="bat-icon" src="https://image.flaticon.com/icons/svg/2174/2174052.svg" alt="bat-logo">
+
+
+    <div class="container-fluid">
+        <header class="row align-items-center py-4">
+            <div class="col-sm-1">
+                <!-- Toggle button here -->
+
             </div>
-            <div class="col-sm-6">
-                <h1 class="page-title">FRIGHT FINDER</h1>
-                <h5 style="font-family: 'Open Sans Condensed', sans-serif;">What spooky events are happening in your
+            <div class="col-sm-8">
+                <div id="page-title">
+                    <a href="index.html">FRIGHT FINDER</a>
+                </div>
+                <h5 id="title-h5">What spooky events are happening in your
                     area?</h5>
             </div>
             <div class="col-sm-3">
-                <span>Search Here</span>
-            </div>
+                <form>
+                    <label for="city-search" id="search-label">Search by City!</label>
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-sm mr-1" id="city-search">
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+          </div>
         </header>
+
+    </div>
+    <div class="container mt-3" id="main">
         <div class="row">
             <div class="col-sm-2 mt-2">
                 <!-- Vertical navbar goes here -->
+
                 <div class="alert alert-dismissible alert-warning nav flex-column nav-pills" id="v-pills-tab"
                     role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="./index.html" role="tab"
@@ -65,6 +90,7 @@
                         aria-controls="v-pills-blank" aria-selected="false">blank</a>
                 </div>
             </div>
+
             <div class="col-sm-10">
                 <!-- Carousel -->
                 <div id="eventCarousel" class="carousel slide w-50" data-ride="carousel">
@@ -109,5 +135,9 @@
         </div>
     </div>
 </body>
+<!-- direct link -->
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+<!-- with downloaded file -->
+<script type='text/javascript' src='/assets/js/eventful.min.js'></script>
 
 </html>

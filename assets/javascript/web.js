@@ -1,102 +1,33 @@
-$(document).ready(function() {
 
-//variables 
-let  date;
-let event = [];
-let location = [];
-let results = [];
+ // store images of the event 
+ var images = [];
+ var eventLat = [];
+ var eventLong = [];
 
-// store images of the events 
-let images =[];
-let eventLat =[];
-let eventLong = [];
-
-//eventbite api key link | function declaring for search of event 
- 
-function searchEventLocation (input){
-    var queryURL =
-    "https://www.eventbrite.com/oauth/authorize?response_type=code&client_id=PUOXOWJBCOXJDZOEI4&redirect_uri=YOUR_REDIRECT_URI" +
-    input;
-  var apiURL = "https://proxy-cbc.herokuapp.com/proxy";
-
+// function declaring for search of the event 
+function EventSearchLocation (){
+  var queryUrl = `https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/image_sizes/start_time/stop_time/tz_id/search?app_key=${eventfulApiKey}&location=${location}&sort_order=popularity&date=this week`;
+  
   $.ajax({
-    url: apiURL,
-    method: "POST",
-    data: {
-      url: queryURL
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        url: queryUrl,
+        method: "GET"
+  
+    })
+    console.log(EventSearchLocation);
+};
+
+// on click button for the search 
+$(document).on("click", "#btn", function (event) {
+event.preventDefault();
+  event = $("btn").val();
+  var location = [];
+ var results = [];
+  console.log("event");
+})
+
+$(document).on("click", ".vertical-menu", function (event){
+  var location = $(".vertical-menu").val();
+  var inYourArea = [];
+  console.log("location");
+})
 });
