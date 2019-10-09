@@ -1,12 +1,4 @@
-$(document).ready(function(){
- // fright finder variables 
- var date ="";
- var event =[];
- var location = [];
- var inYourArea = [];
- var olderPlus =[];
- var eventfulApiKey =`ZpK2fMNqsCw5JgDC`;
- 
+
  // store images of the event 
  var images = [];
  var eventLat = [];
