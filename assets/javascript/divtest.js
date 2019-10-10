@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     //let event;
     let category = $(".events-col").attr("data-category");
    
@@ -24,6 +25,27 @@ $(document).ready(function () {
             console.log(results.events.event);
         })
 
-    });
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    })
+        .then(function (response) {
+        
+            let results = JSON.parse(response);
+            console.log(results);
+
+            for (let i = 0; i < 10; i++) {
+                //let addressData = results.events.event[i].venue_address;
+                //console.log(addressData);
+                //eventsLocs.push(addressData);
+                //console.log(eventsLocs);
+
+                let eventDiv = $("<div>").attr("class", "event-div");
+                let eventTitle = $("<h3>").text(results.events.event[i].title);
+
+                eventDiv.append(eventTitle);
+                $(".events-col").append(eventDiv);
+            };
+        });
 
 });
