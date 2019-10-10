@@ -4,9 +4,10 @@ function request(query) {
     this.fields = ["name", "geometry"];
 }
 function myMap() {
+    let categoryMap = $(".map-container > div").attr("id");
     let tmpCenter = new google.maps.LatLng(0, 0);
     let bounds = new google.maps.LatLngBounds();
-    let map = new google.maps.Map(document.getElementById("family-map"), { center: tmpCenter, zoom: 12 });
+    let map = new google.maps.Map(document.getElementById(categoryMap), { center: tmpCenter, zoom: 12 });
 
     function createMarker(place) {
         let marker = new google.maps.Marker({
@@ -40,7 +41,10 @@ function myMap() {
     }
     let eventsLocs = ["1275 E Baseline Rd #107", "92 West Vaughn Avenue, Gilbert, AZ", "745 N Gilbert Rd #110", "1550 N Stonehenge Dr #102", "240 N Sunway Dr #102" ];
 
+       // for (let i = 0; i < 10; i++) {
+         //   let addressData = results.events.event[i].venue_address;
+           // eventsLocs.push(addressData);
+
+
     addressMarkers(eventsLocs);
-
-
 }
