@@ -14,7 +14,7 @@ $(document).ready(function () {
 
   // function declaring for search of the event 
   function EventSearchLocation() {
-    var queryUrl = `https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/image_sizes/start_time/stop_time/tz_id/search?app_key=${eventfulApiKey}&location=${location}&sort_order=popularity&date=this week`;
+    var queryUrl = `https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=${eventfulApiKey}&q=halloween&l=phoenix&within=30&units=miles`;
 
     $.ajax({
       url: queryUrl,
