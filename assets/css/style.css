@@ -75,12 +75,21 @@ nav {
     background: white;
     color: black;
     height: 75px;
-    padding: 10px;
+    padding: 0px 15px;
+    line-height: 75px;
     margin: 5px;
-    border: 2px solid black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    text-align: center;
 }
-.map-style {
+.map-display {
     margin: 40px 0px 40px;
     width: 370px;
     height: 310px;
+}
+.events-col h3 {
+    font-weight: bold;
+    display: inline-block;
+    line-height: 25px;
+    vertical-align: middle;
 }
