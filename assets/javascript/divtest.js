@@ -2,11 +2,13 @@
 
 $(document).ready(function () {
 
+    //let event;
     let category = $(".events-col").attr("data-category");
-    console.log(category);
-
+   
+    let location = $(".city-search").attr("data-location")
+  
     let eventfulApiKey = "ZpK2fMNqsCw5JgDC";
-    let queryUrl = `https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=${eventfulApiKey}&q=halloween&c=${category}&l=phoenix&within=30&units=miles`;
+    let queryUrl = `https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=${eventfulApiKey}&q=halloween&c=${category}&l=phoenix&within=30&units=miles&l=location&phoenix+arizona&date=future`;
 
     $.ajax({
         url: queryUrl,
@@ -46,6 +48,6 @@ $(document).ready(function () {
                // console.log(response)
                 var results = response;
                 console.log(results.events.event);
-            })
-
-});
+            });
+        });
+})

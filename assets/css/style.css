@@ -93,3 +93,6 @@ nav {
     line-height: 25px;
     vertical-align: middle;
 }
+.navbar-collapse {
+    font-color: orange;
+}
