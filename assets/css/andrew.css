@@ -1,25 +1,9 @@
-.vertical-menu {
-    width: 200px;
+.fa-1x {
+  font-size: 1.5rem;
   }
-  
-  .vertical-menu a {
-    background-color: #eee;
-    color: black;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
+  .navbar-toggler.toggler-example {
+  cursor: pointer;
   }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc;
-  }
-  
-  .vertical-menu a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  #bat-icon {
-      width: 100px;
-      height: 100px;
-  }
+  .dark-blue-text {
+    color: #FF8800;
+    }
