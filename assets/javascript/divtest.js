@@ -1,3 +1,5 @@
+// var eventsLocs = [];
+
 $(document).ready(function () {
 
     let category = $(".events-col").attr("data-category");
@@ -11,15 +13,14 @@ $(document).ready(function () {
         method: "GET"
     })
         .then(function (response) {
-        
+
             let results = JSON.parse(response);
             console.log(results);
 
-            for (let i = 0; i < 10; i++) {
-                //let addressData = results.events.event[i].venue_address;
-                //console.log(addressData);
-                //eventsLocs.push(addressData);
-                //console.log(eventsLocs);
+            let eventsLocs = [];
+            for (let i = 0; i < results.events.event.length; i++) {
+
+                eventsLocs.push(results.events.event[i].venue_address);
 
                 let eventDiv = $("<div>").attr("class", "event-div");
                 let eventTitle = $("<h3>").text(results.events.event[i].title);
@@ -27,6 +28,24 @@ $(document).ready(function () {
                 eventDiv.append(eventTitle);
                 $(".events-col").append(eventDiv);
             };
+            console.log(eventsLocs);
+            myMap(eventsLocs);
         });
+
+        $('#sBtn').on("click", function (e) {
+            let eventfulApiKey = "ZpK2fMNqsCw5JgDC";
+            let location = $("#city-search").val();
+            let queryUrl = `https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=${eventfulApiKey}&q=halloween&l=${location}&within=30&units=miles`;
+            e.preventDefault();
+            console.log("Working")
+            $.ajax({
+                url: queryUrl,
+                method: "GET",
+                dataType: 'json'
+            }).done(function (response) {
+               // console.log(response)
+                var results = response;
+                console.log(results.events.event);
+            })
 
 });
