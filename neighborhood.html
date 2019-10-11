@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>In your Neighborhood</title>
 
     <!-- Google fonts -->
@@ -14,25 +15,17 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/95a97a493a.js" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap CSS and JS -->
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-w+8Gqjk9Cuo6XH9HKHG5t5I1VR4YBNdPt/29vwgfZR485eoEJZ8rJRbm3TR32P6k" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <!-- Our CSS files -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/andrew.css">
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
 
-    <!-- Our Javascript & jQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="./assets/javascript/web.js"></script>
+
+
 </head>
 
 <head>
@@ -70,9 +63,12 @@
 </head>
 
 <body>
+
+
     <div class="container-fluid">
         <header class="row align-items-center py-4">
             <div class="col-sm-1">
+                <!-- Toggle button here -->
 
             </div>
             <div class="col-sm-8">
@@ -131,6 +127,43 @@
             </div>
         </div>
     </div>
+
+    <div class="container mt-3" id="main">
+        <div class="row">
+            <div class="col-sm-2 mt-2">
+                <!-- Vertical navbar goes here -->
+            </div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-6 events-col" id="neighborhood-list" data-category="community">
+                            <h2>IN YOUR NEIGHBORHOOD</h2>
+                        <!-- Divs for events will be dynamically coded here with jQuery -->
+                    </div>
+                    <div class="col-sm-6 map-container">
+                        <!-- Hard code container for map here -->
+                        <div id="neighborhood-map" class="map-display">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bootstrap jQuery and JS-->
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+            <!-- Our Javascript & jQuery-->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <!-- <script src="./assets/javascript/web.js"></script> -->
+            <script src="./assets/javascript/divtest.js"></script>
+            <script src="./assets/javascript/map.js"></script>
+
+            <!-- Google API -->
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP_iPWr3BoBerRke2pVaWWynlarDRego&libraries=places&callback=myMap"
+                async defer></script>
 </body>
 
 

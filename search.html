@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-    <title>21 Plus</title>
+    <title>Fright Finder</title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
@@ -23,12 +24,16 @@
     <link rel="stylesheet" href="./assets/css/andrew.css">
 
 
+
 </head>
 
 <body>
+
+
     <div class="container-fluid">
         <header class="row align-items-center py-4">
             <div class="col-sm-1">
+                <!-- Toggle button here -->
 
             </div>
             <div class="col-sm-8">
@@ -54,56 +59,34 @@
         </header>
 
     </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <!--Navbar-->
-                <nav class="navbar navbar-light warning-color-dark lighten-4">
-                    <!-- Collapse button -->
-                    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
-                        aria-expanded="false" aria-label="Toggle navigation"><i
-                            class="fas fa-bars fa-1x"></i></span></button>
-
-                    <!-- Collapsible content -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-
-                        <!-- Links -->
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="21plus.html">21+ <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="neighborhood.html">In Your Neighborhood</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"></a>
-                            </li>
-                        </ul>
-                        <!-- Links -->
-                </nav>
-            </div>
-        </div>
-    </div>
-   
-
-
-    </div>
     <div class="container mt-3" id="main">
         <div class="row">
             <div class="col-sm-2 mt-2">
-     
+                <!-- Vertical navbar goes here -->
+
+                <div class="alert alert-dismissible alert-warning nav flex-column nav-pills" id="v-pills-tab"
+                    role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="./index.html" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true">Home</a>
+                    <a class="nav-link" id="v-pills-21-tab" data-toggle="pill" href="./21plus.html" role="tab"
+                        aria-controls="v-pills-21" aria-selected="false">21+</a>
+                    <a class="nav-link" id="v-pills-neighborhood-tab" data-toggle="pill" href="./neighborhood.html"
+                        role="tab" aria-controls="v-pills-neighborhood" aria-selected="false">In Your Neighborhood</a>
+                    <a class="nav-link" id="v-pills-blank-tab" data-toggle="pill" href="#v-pills-blank" role="tab"
+                        aria-controls="v-pills-blank" aria-selected="false">blank</a>
+                    <a class="nav-link" id="v-pills-blank-tab" data-toggle="pill" href="#v-pills-blank" role="tab"
+                        aria-controls="v-pills-blank" aria-selected="false">blank</a>
+                </div>
             </div>
             <div class="col-sm-10">
                 <div class="row">
-                    <div class="col-sm-6 events-col" id="21plus-list" data-category="singles_social">
-                            <h2>21 AND UP</h2>
+                    <div class="col-sm-6 events-col" id="search-list">
+                            <h2>EVENTS IN <span id="city-name"></span></h2>
                         <!-- Divs for events will be dynamically coded here with jQuery -->
                     </div>
-                    <div class="col-sm-6 map-container">
+                    <div class="col-sm-6">
                         <!-- Hard code container for map here -->
-                        <div id="21plus-map" class="map-display">
+                        <div id="search-map" class="map-style">
 
                         </div>
                     </div>
@@ -126,7 +109,6 @@
             <script
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP_iPWr3BoBerRke2pVaWWynlarDRego&libraries=places&callback=myMap"
                 async defer></script>
-
 </body>
 
 </html>

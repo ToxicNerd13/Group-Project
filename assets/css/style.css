@@ -42,6 +42,20 @@ header {
 #main {
     background: black;
 }
+#main p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+     font-size: 18px;
+     line-height: 1.5em;
+     padding: 0px 50px 40px;
+}
+#main h2 {
+    text-align: center;
+    font-family: 'Creepster', cursive, serif;
+    font-size: 40px;
+    color: orange;
+    margin-bottom: 45px;
+}
 .carousel-item img {
     max-height: 300px;
 }
@@ -53,4 +67,26 @@ nav {
     padding-bottom: 5px;
     color: orange;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+.event-div {
+    background: white;
+    color: black;
+    height: 75px;
+    padding: 0px 15px;
+    line-height: 75px;
+    margin: 5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.map-display {
+    margin: 40px 0px 40px;
+    width: 370px;
+    height: 310px;
+}
+.events-col h3 {
+    font-weight: bold;
+    display: inline-block;
+    line-height: 25px;
+    vertical-align: middle;
 }
